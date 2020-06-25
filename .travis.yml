@@ -55,6 +55,8 @@ matrix:
 #    - mono hello.exe
 
   - language: smalltalk
+    os:
+      - linux
     smalltalk_vm:
     - Squeak-5.0
     smalltalk:
