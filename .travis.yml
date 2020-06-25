@@ -32,6 +32,8 @@ matrix:
             - mvn clean install
             
         - language: go
+          go:
+            - master
           script:
             - go run hello.go
 
