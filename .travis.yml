@@ -1,62 +1,61 @@
 matrix:
-    os: linux
-    dist: focal
-    arch: arm64-graviton2
-    group: dev
-    
-    include:
-        - language: ruby
-          rvm:
-            - 2.5
-          script: 
-              - ruby hello.rb
-                 
-        - language: cpp
-          compiler: clang
-          script:
-            - g++ hello.cpp  
-        
-        - language: python
-          script:
-            - python hello.py
-        
-        - language: node_js
-          node_js:
-            - node
-          script:
-            - node hello.js
-        
-        - language: java
-          jdk: openjdk8
-          script:
-            - mvn clean install
-            
-        - language: go
-          go:
-            - master
-          script:
-            - go run hello.go
+  os: linux
+  dist: focal
+  arch: arm64-graviton2
+  group: dev
 
-        - language: php
-          php: '7.0'
-          script:
-            - php hello.php
-            
-        - language: perl
-          perl: '5.30'
-          before_install:
-            - cpanm --quiet --notest --skip-satisfied App::Sqitch
-          script:
-            - perl hello.pl            
+  include:
+#  - language: ruby
+#    rvm:
+#    - 2.5
+#    script:
+#    - ruby hello.rb
+#
+#  - language: cpp
+#    compiler: clang
+#    script:
+#    - g++ hello.cpp
+#
+#  - language: python
+#    script:
+#    - python hello.py
+#
+#  - language: node_js
+#    node_js:
+#    - node
+#    script:
+#    - node hello.js
+#
+#  - language: java
+#    jdk: openjdk8
+#    script:
+#    - mvn clean install
 
-        - language: csharp
-          script:
-            - csc hello.cs
-            - mono hello.exe
-            
-        - language: smalltalk
-          smalltalk_vm:
-            - Squeak-5.0
-          smalltalk:
-            - Squeak-trunk  
-            
+  - language: go
+    go:
+    - master
+    script:
+    - go run hello.go
+
+#  - language: php
+#    php: '7.0'
+#    script:
+#    - php hello.php
+
+  - language: perl
+    perl: '5.30'
+    before_install:
+    - cpanm --quiet --notest --skip-satisfied App::Sqitch
+    script:
+    - perl hello.pl
+
+#  - language: csharp
+#    script:
+#    - csc hello.cs
+#    - mono hello.exe
+
+  - language: smalltalk
+    smalltalk_vm:
+    - Squeak-5.0
+    smalltalk:
+    - Squeak-trunk
