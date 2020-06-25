@@ -35,7 +35,7 @@ matrix:
     go:
     - master
     script:
-    - go run hello.go
+    - go build
 
 #  - language: php
 #    php: '7.0'
