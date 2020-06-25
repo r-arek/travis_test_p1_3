@@ -45,7 +45,7 @@ matrix:
   - language: perl
     perl: '5.30'
     before_install:
-    - cpanm --quiet --notest --skip-satisfied App::Sqitch
+    - sudo apt-get install -qq unixodbc unixodbc-dev
     script:
     - perl hello.pl
 
