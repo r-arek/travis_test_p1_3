@@ -33,9 +33,7 @@ matrix:
             
         - language: go
           script:
-            - go build
-            - ls -la
-            - hello.go
+            - go test -v ./...
 
         - language: php
           php: '7.0'
