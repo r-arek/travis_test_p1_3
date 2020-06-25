@@ -1,0 +1,63 @@
+matrix:
+    os: linux
+    dist: focal
+    arch: arm64-graviton2
+    group: dev
+    
+    include:
+        - language: ruby
+          rvm:
+            - 2.5
+          script: 
+              - ruby hello.rb
+                 
+        - language: cpp
+          compiler: clang
+          script:
+            - g++ hello.cpp  
+        
+        - language: python
+          script:
+            - python hello.py
+        
+        - language: node_js
+          node_js:
+            - 7
+          script:
+            - node hello.js
+        
+        - language: java
+          jdk: openjdk8
+          script:
+            - mvn clean install
+            
+        - language: go
+          script:
+            - go build
+            - ls -la
+            - ./hello
+
+        - language: php
+          php: '7.0'
+          script:
+            - php hello.php
+            
+        - language: perl
+          perl: '5.30'
+          script:
+            - perl hello.PL            
+
+        - language: csharp
+          script:
+            - csc hello.cs
+            - mono hello.exe
+            
+        - language: smalltalk
+          smalltalk_vm:
+            - Squeak-5.0
+          smalltalk:
+            - Squeak-trunk
+          script:
+            - csc hello.cs
+            - mono hello.exe            
+            
