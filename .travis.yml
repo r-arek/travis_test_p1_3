@@ -34,6 +34,7 @@ matrix:
   - language: go
     script:
     - go build
+    -  ./travis_test_p1_3 
 
 #  - language: php
 #    php: '7.0'
