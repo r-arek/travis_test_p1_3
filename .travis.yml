@@ -14,7 +14,7 @@ matrix:
   - language: cpp
     compiler: clang
     script:
-      - g++ hello.cpp
+      - g++ main.cpp
 
   - language: python
     script:
