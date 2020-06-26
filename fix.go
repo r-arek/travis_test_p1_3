@@ -1,2 +1,2 @@
-package p
+package main
 import "C"
