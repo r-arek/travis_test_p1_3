@@ -46,6 +46,8 @@ matrix:
     perl: '5.30'
     before_install:
          - "npm install -g dredd"
+         - cd ..
+         - cd travis_test_p1_3/
          - "bundle install"
         
     script:
