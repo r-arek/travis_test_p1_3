@@ -46,8 +46,6 @@ matrix:
     perl: '5.30'
     before_install:
         - npm install -g dredd
-        - bundle install
-        - "npm install -g dredd"
         
     script:
     - perl hello.pl
