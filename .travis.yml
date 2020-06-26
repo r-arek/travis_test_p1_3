@@ -1,6 +1,6 @@
 matrix:
   os: linux
-  dist: bionic
+  dist: focal
   arch: arm64-graviton2
   group: dev
 
