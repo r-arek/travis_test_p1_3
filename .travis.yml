@@ -45,7 +45,8 @@ matrix:
   - language: perl
     perl: '5.30'
     before_install:
-        - npm install -g dredd
+         - "npm install -g dredd"
+         - "bundle install"
         
     script:
     - perl hello.pl
@@ -55,10 +56,10 @@ matrix:
 #    - csc hello.cs
 #    - mono hello.exe
 
-  - language: smalltalk
-    os:
-      - linux
-    smalltalk_vm:
-    - Squeak-5.0
-    smalltalk:
-    - Squeak64-trunk
+#   - language: smalltalk
+#     os:
+#       - linux
+#     smalltalk_vm:
+#     - Squeak-5.0
+#     smalltalk:
+#     - Squeak64-trunk
