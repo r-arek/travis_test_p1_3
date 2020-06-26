@@ -34,13 +34,11 @@ matrix:
 #   - language: go
 #     script:
 #     - go run ./hello.go
-    
-    
-
-#  - language: php
-#    php: '7.0'
-#    script:
-#    - php hello.php
+ 
+  - language: php
+    php: '7.0'
+    script:
+      - php hello.php
 
   - language: perl
     perl: '5.30'
