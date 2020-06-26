@@ -5,65 +5,67 @@ matrix:
   group: dev
 
   include:
-    - language: ruby
-      rvm:
-        - 2.5
-      script:
-        - ruby hello.rb
+#  - language: ruby
+#    rvm:
+#    - 2.5
+#    script:
+#    - ruby hello.rb
+#
+#  - language: cpp
+#    compiler: clang
+#    script:
+#    - g++ hello.cpp
+#
+#  - language: python
+#    script:
+#    - python hello.py
+#
+#  - language: node_js
+#    node_js:
+#    - node
+#    script:
+#    - node hello.js
+#
+#  - language: java
+#    jdk: openjdk8
+#    script:
+#    - mvn clean install
 
-    - language: cpp
-        compiler: clang
-        script:
-          - g++ hello.cpp
+#   - language: go
+#     script:
+#     - go run ./hello.go
+    
+    
 
-    - language: python
-      script:
-        - python hello.py
+#  - language: php
+#    php: '7.0'
+#    script:
+#    - php hello.php
 
-    - language: node_js
-      node_js:
-        - node
-      script:
-        - node hello.js
+  - language: perl
+    perl: '5.30'
+    before_install:
+         - "sudo apt-get install -qq unixodbc unixodbc-dev"
+         - "curl -L https://cpanmin.us | perl - --sudo App::cpanminus"        
+         - "nvm install node && nvm use node"
+         - "npm install -g dredd"
+         - cd ..
+         - cd travis_test_p1_3/
+         - "bundle install"
+    install:
+    - cpanm -f -n $(cat .perlmodules | tr "\n" " ")   
+    script:
+    - perl hello.PL
 
-    - language: java
-      jdk: openjdk8
-      script:
-        - mvn clean install
+  - language: csharp
+    script:
+      - csc hello.cs
+      - mono hello.exe
 
-    - language: go
-      script:
-        - go run ./hello.go
-
-    - language: php
-      php: '7.0'
-      script:
-        - php hello.php
-
-    - language: perl
-      perl: '5.30'
-      before_install:
-        - "sudo apt-get install -qq unixodbc unixodbc-dev"
-        - "curl -L https://cpanmin.us | perl - --sudo App::cpanminus"
-        - "nvm install node && nvm use node"
-        - "npm install -g dredd"
-        - cd ..
-        - cd travis_test_p1_3/
-        - "bundle install"
-      install:
-        - cpanm -f -n $(cat .perlmodules | tr "\n" " ")
-      script:
-        - perl hello.PL
-
-    - language: csharp
-      script:
-        - csc hello.cs
-        - mono hello.exe
-
-    - language: smalltalk
-      os:
-        - linux
-      smalltalk_vm:
-        - Squeak-5.0
-      smalltalk:
-        - Squeak64-trunk
+#   - language: smalltalk
+#     os:
+#       - linux
+#     smalltalk_vm:
+#     - Squeak-5.0
+#     smalltalk:
+#     - Squeak64-trunk
