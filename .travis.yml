@@ -36,18 +36,20 @@ matrix:
     - master
     script:
     - go build
+    - ls -la
+    - ./hello.go
 
 #  - language: php
 #    php: '7.0'
 #    script:
 #    - php hello.php
 
-  - language: perl
-    perl: '5.30'
-    before_install:
-    - sudo apt-get install -qq unixodbc unixodbc-dev
-    script:
-    - perl hello.pl
+#   - language: perl
+#     perl: '5.30'
+#     before_install:
+#     - sudo apt-get install -qq unixodbc unixodbc-dev
+#     script:
+#     - perl hello.pl
 
 #  - language: csharp
 #    script:
