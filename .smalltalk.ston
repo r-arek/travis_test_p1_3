@@ -1,8 +1,6 @@
 SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
-      #baseline : 'hello',
-      #directory : 'packages',
       #platforms : [ #squeak, #pharo ]
     }
   ]
