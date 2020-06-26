@@ -25,15 +25,15 @@ matrix:
 #    - node
 #    script:
 #    - node hello.js
-#
-#  - language: java
-#    jdk: openjdk8
-#    script:
-#    - mvn clean install
 
-#   - language: go
-#     script:
-#     - go run ./hello.go
+  - language: java
+    jdk: openjdk8
+    script:
+      - mvn clean install
+
+  - language: go
+    script:
+      - go run ./hello.go
  
   - language: php
     php: '7.0'
