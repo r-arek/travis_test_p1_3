@@ -15,16 +15,16 @@ matrix:
 #    compiler: clang
 #    script:
 #    - g++ hello.cpp
-#
-#  - language: python
-#    script:
-#    - python hello.py
-#
-#  - language: node_js
-#    node_js:
-#    - node
-#    script:
-#    - node hello.js
+
+  - language: python
+    script:
+      - python hello.py
+
+  - language: node_js
+    node_js:
+      - node
+    script:
+      - node hello.js
 
   - language: java
     jdk: openjdk8
