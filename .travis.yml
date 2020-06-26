@@ -62,10 +62,10 @@ matrix:
       - csc hello.cs
       - mono hello.exe
 
-#   - language: smalltalk
-#     os:
-#       - linux
-#     smalltalk_vm:
-#     - Squeak-5.0
-#     smalltalk:
-#     - Squeak64-trunk
+  - language: smalltalk
+    os:
+      - linux
+    smalltalk_vm:
+      - Squeak-5.0
+    smalltalk:
+      - Squeak64-trunk
