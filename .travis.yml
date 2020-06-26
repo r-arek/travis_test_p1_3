@@ -5,16 +5,16 @@ matrix:
   group: dev
 
   include:
-#  - language: ruby
-#    rvm:
-#    - 2.5
-#    script:
-#    - ruby hello.rb
-#
-#  - language: cpp
-#    compiler: clang
-#    script:
-#    - g++ hello.cpp
+  - language: ruby
+    rvm:
+      - 2.5
+    script:
+      - ruby hello.rb
+
+  - language: cpp
+    compiler: clang
+    script:
+      - g++ hello.cpp
 
   - language: python
     script:
