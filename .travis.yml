@@ -31,9 +31,9 @@ matrix:
 #    script:
 #    - mvn clean install
 
-  - language: go
-    script:
-    - go run ./hello.go
+#   - language: go
+#     script:
+#     - go run ./hello.go
     
     
 
@@ -44,8 +44,8 @@ matrix:
 
   - language: perl
     perl: '5.30'
-    before_install:
-    - sudo apt-get install -qq unixodbc unixodbc-dev
+#     before_install:
+#     - sudo apt-get install -qq unixodbc unixodbc-dev
     script:
     - perl hello.pl
 
