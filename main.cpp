@@ -1,6 +1,10 @@
-#include <iostream>
+// Program without using main function
+// Compile it with gcc -nostartfiles
 
-int main() {
-    std::cout << "Hello World!";
-    return 0;
+#include <stdio.h>
+
+void _start()
+{
+    printf("Inside _start\n");
+    _exit(0);
 }
