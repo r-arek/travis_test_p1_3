@@ -32,12 +32,8 @@ matrix:
 #    - mvn clean install
 
   - language: go
-    go:
-    - master
     script:
     - go build
-    - ls -la
-    - ./hello.go
 
 #  - language: php
 #    php: '7.0'
