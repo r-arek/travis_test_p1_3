@@ -33,7 +33,9 @@ matrix:
 
   - language: go
     script:
-    - go run hello.go
+    - cd /go
+    - go run ./hello.go
+    - cd..
     
 
 #  - language: php
