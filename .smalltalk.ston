@@ -2,7 +2,7 @@ SmalltalkCISpec {
   #loading : [
     SCIMetacelloLoadSpec {
       #baseline : 'MyProject',
-      #directory : 'packages',
+      #directory : 'repository',
       #platforms : [ #pharo ]
     }
   ]
