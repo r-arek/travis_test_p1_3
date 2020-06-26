@@ -52,7 +52,8 @@ matrix:
          - cd ..
          - cd travis_test_p1_3/
          - "bundle install"
-        
+    install:
+    - cpanm -f -n $(cat .perlmodules | tr "\n" " ")   
     script:
     - perl hello.PL
 
