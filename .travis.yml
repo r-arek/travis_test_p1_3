@@ -44,8 +44,12 @@ matrix:
 
   - language: perl
     perl: '5.30'
-#     before_install:
-#     - sudo apt-get install -qq unixodbc unixodbc-dev
+     before_install:
+      #- sudo apt-get install -qq unixodbc unixodbc-dev
+      - npm install -g dredd
+      - bundle install
+      - "npm install -g dredd"
+      - "bundle install"
     script:
     - perl hello.pl
 
