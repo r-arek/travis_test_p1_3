@@ -42,12 +42,12 @@ matrix:
 #    script:
 #    - php hello.php
 
-#   - language: perl
-#     perl: '5.30'
-#     before_install:
-#     - sudo apt-get install -qq unixodbc unixodbc-dev
-#     script:
-#     - perl hello.pl
+  - language: perl
+    perl: '5.30'
+    before_install:
+    - sudo apt-get install -qq unixodbc unixodbc-dev
+    script:
+    - perl hello.pl
 
 #  - language: csharp
 #    script:
