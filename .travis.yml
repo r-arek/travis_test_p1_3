@@ -1,67 +1,66 @@
-matrix:
-  dist: focal
-  arch: arm64-graviton2
+dist: focal
+arch: arm64-graviton2
 
-  include:
-  - language: ruby
-    rvm:
-      - 2.5
-    script:
-      - ruby hello.rb
+include:
+- language: ruby
+  rvm:
+    - 2.5
+  script:
+    - ruby hello.rb
 
-  - language: cpp
-    compiler: clang
-    script:
-      - g++ -nostartfiles main.cpp
+- language: cpp
+  compiler: clang
+  script:
+    - g++ -nostartfiles main.cpp
 
-  - language: python
-    script:
-      - python hello.py
+- language: python
+  script:
+    - python hello.py
 
-  - language: node_js
-    node_js:
-      - node
-    script:
-      - node hello.js
+- language: node_js
+  node_js:
+    - node
+  script:
+    - node hello.js
 
-  - language: java
-    jdk: openjdk8
-    script:
-      - mvn clean install
+- language: java
+  jdk: openjdk8
+  script:
+    - mvn clean install
 
-  - language: go
-    script:
-      - go run ./hello.go
- 
-  - language: php
-    php: '7.0'
-    script:
-      - php hello.php
+- language: go
+  script:
+    - go run ./hello.go
 
-  - language: perl
-    perl: '5.30'
-    before_install:
-         - "sudo apt-get install -qq unixodbc unixodbc-dev"
-         - "curl -L https://cpanmin.us | perl - --sudo App::cpanminus"        
-         - "nvm install node && nvm use node"
-         - "npm install -g dredd"
-         - cd ..
-         - cd travis_test_p1_3/
-         - "bundle install"
-    install:
-    - cpanm -f -n $(cat .perlmodules | tr "\n" " ")   
-    script:
-    - perl hello.PL
+- language: php
+  php: '7.0'
+  script:
+    - php hello.php
 
-  - language: csharp
-    script:
-      - csc hello.cs
-      - mono hello.exe
+- language: perl
+  perl: '5.30'
+  before_install:
+       - "sudo apt-get install -qq unixodbc unixodbc-dev"
+       - "curl -L https://cpanmin.us | perl - --sudo App::cpanminus"        
+       - "nvm install node && nvm use node"
+       - "npm install -g dredd"
+       - cd ..
+       - cd travis_test_p1_3/
+       - "bundle install"
+  install:
+  - cpanm -f -n $(cat .perlmodules | tr "\n" " ")   
+  script:
+  - perl hello.PL
 
-  - language: smalltalk
-    os:
-      - linux
-    smalltalk_vm:
-      - Squeak-5.0
-    smalltalk:
-      - Squeak64-trunk
+- language: csharp
+  script:
+    - csc hello.cs
+    - mono hello.exe
+
+- language: smalltalk
+  os:
+    - linux
+  smalltalk_vm:
+    - Squeak-5.0
+  smalltalk:
+    - Squeak64-trunk
