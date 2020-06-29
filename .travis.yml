@@ -1,62 +1,55 @@
-matrix:
-  os: linux
-  dist: focal
-  arch: arm64-graviton2
-  group: dev
 
+os: linux
+dist: focal
+arch: arm64-graviton2
+group: dev
+
+jobs:
   include:
   - language: ruby
-    dist: focal
-    arch: arm64-graviton2
+    #arch: arm64-graviton2
     rvm:
       - 2.5
     script:
       - ruby hello.rb
 
   - language: cpp
-    dist: focal
-    arch: arm64-graviton2
+    #arch: arm64-graviton2
     compiler: clang
     script:
       - g++ -nostartfiles main.cpp
 
   - language: python
-    dist: focal
-    arch: arm64-graviton2
+    #arch: arm64-graviton2
     script:
       - python hello.py
 
   - language: node_js
-    dist: focal
-    arch: arm64-graviton2
+    #arch: arm64-graviton2
     node_js:
       - node
     script:
       - node hello.js
 
   - language: java
-    dist: focal
-    arch: arm64-graviton2
+    #arch: arm64-graviton2
     jdk: openjdk8
     script:
       - mvn clean install
 
   - language: go
-    dist: focal
-    arch: arm64-graviton2
+    #arch: arm64-graviton2
     script:
       - go run ./hello.go
  
   - language: php
-    dist: focal
-    arch: arm64-graviton2
+    #arch: arm64-graviton2
     php: '7.0'
     script:
       - php hello.php
 
   - language: perl
-    dist: focal
-    arch: arm64-graviton2
+    #arch: arm64-graviton2
     perl: '5.30'
     before_install:
          - "sudo apt-get install -qq unixodbc unixodbc-dev"
@@ -72,15 +65,13 @@ matrix:
     - perl hello.PL
 
   - language: csharp
-    dist: focal
-    arch: arm64-graviton2
+    #arch: arm64-graviton2
     script:
       - csc hello.cs
       - mono hello.exe
 
   - language: smalltalk
-    dist: focal
-    arch: arm64-graviton2
+    #arch: arm64-graviton2
     os:
       - linux
     smalltalk_vm:
