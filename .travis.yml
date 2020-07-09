@@ -35,7 +35,7 @@ jobs:
       - go run ./hello.go
  
   - language: php
-    php: '7.0'
+    php: '7.4'
     script:
       - php hello.php
 
