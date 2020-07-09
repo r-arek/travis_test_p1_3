@@ -1,74 +1,74 @@
-os: linux
-dist: focal
-arch: arm64-graviton2
-group: dev
-virt: lxd
+# os: linux
+# dist: focal
+# arch: arm64-graviton2
+# group: dev
+# virt: lxd
 
-jobs:
-  include:
-  - language: ruby
-    arch: arm64-graviton2
-    rvm:
-      - 2.5
-    script:
-      - ruby hello.rb
+# jobs:
+#   include:
+#   - language: ruby
+#     arch: arm64-graviton2
+#     rvm:
+#       - 2.5
+#     script:
+#       - ruby hello.rb
 
-  - language: cpp
-    arch: arm64-graviton2
-    compiler: clang
-    script:
-      - g++ -nostartfiles main.cpp
+#   - language: cpp
+#     arch: arm64-graviton2
+#     compiler: clang
+#     script:
+#       - g++ -nostartfiles main.cpp
 
-  - language: python
-    arch: arm64-graviton2
-    script:
-      - python hello.py
+#   - language: python
+#     arch: arm64-graviton2
+#     script:
+#       - python hello.py
 
-  - language: node_js
-    arch: arm64-graviton2
-    node_js:
-      - node
-    script:
-      - node hello.js
+#   - language: node_js
+#     arch: arm64-graviton2
+#     node_js:
+#       - node
+#     script:
+#       - node hello.js
 
-  - language: java
-    arch: arm64-graviton2
-    jdk: openjdk8
-    script:
-      - mvn clean install
+#   - language: java
+#     arch: arm64-graviton2
+#     jdk: openjdk8
+#     script:
+#       - mvn clean install
 
-  - language: go
-    arch: arm64-graviton2
-    script:
-      - go run ./hello.go
+#   - language: go
+#     arch: arm64-graviton2
+#     script:
+#       - go run ./hello.go
  
-  - language: php
-    arch: arm64-graviton2
-    php: '7.0'
-    script:
-      - php hello.php
+#   - language: php
+#     arch: arm64-graviton2
+#     php: '7.0'
+#     script:
+#       - php hello.php
 
-  - language: perl
-    arch: arm64-graviton2
-    perl: '5.30'
-    before_install:
-         - "sudo apt-get install -qq unixodbc unixodbc-dev"
-         - "curl -L https://cpanmin.us | perl - --sudo App::cpanminus"        
-         - "nvm install node && nvm use node"
-         - "npm install -g dredd"
-         - cd ..
-         - cd travis_test_p1_3/
-         - "bundle install"
-    install:
-    - cpanm -f -n $(cat .perlmodules | tr "\n" " ")   
-    script:
-    - perl hello.PL
+#   - language: perl
+#     arch: arm64-graviton2
+#     perl: '5.30'
+#     before_install:
+#          - "sudo apt-get install -qq unixodbc unixodbc-dev"
+#          - "curl -L https://cpanmin.us | perl - --sudo App::cpanminus"        
+#          - "nvm install node && nvm use node"
+#          - "npm install -g dredd"
+#          - cd ..
+#          - cd travis_test_p1_3/
+#          - "bundle install"
+#     install:
+#     - cpanm -f -n $(cat .perlmodules | tr "\n" " ")   
+#     script:
+#     - perl hello.PL
 
-  - language: csharp
-    arch: arm64-graviton2
-    script:
-      - csc hello.cs
-      - mono hello.exe
+#   - language: csharp
+#     arch: arm64-graviton2
+#     script:
+#       - csc hello.cs
+#       - mono hello.exe
 
   - language: smalltalk
     arch: arm64-graviton2
