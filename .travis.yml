@@ -1,11 +1,11 @@
-# os: linux
-# dist: focal
-# arch: arm64-graviton2
-# group: dev
-# virt: lxd
+os: linux
+dist: focal
+arch: arm64-graviton2
+group: dev
+virt: lxd
 
-# jobs:
-#   include:
+jobs:
+  include:
 #   - language: ruby
 #     arch: arm64-graviton2
 #     rvm:
