@@ -72,6 +72,8 @@ jobs:
 
   - language: smalltalk
     arch: arm64-graviton2
+    before_install:
+      - "sudo apt-get install libpulse0:i386"
     os:
       - linux
     smalltalk_vm:
