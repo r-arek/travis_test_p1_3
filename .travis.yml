@@ -1,6 +1,7 @@
 os: linux
 dist: focal
 arch: arm64-graviton2
+group: edge
 
 jobs:
   include:
@@ -53,16 +54,3 @@ jobs:
     - cpanm -f -n $(cat .perlmodules | tr "\n" " ")   
     script:
     - perl hello.PL
-
-  - language: csharp
-    script:
-      - csc hello.cs
-      - mono hello.exe
-
-  - language: smalltalk
-    os:
-      - linux
-    smalltalk_vm:
-      - Squeak-5.0
-    smalltalk:
-      - Squeak64-trunk
