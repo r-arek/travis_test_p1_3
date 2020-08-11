@@ -3,7 +3,7 @@ os: linux
 dist: focal
 arch: arm64-graviton2
 group: edge
-virt: lxd
+virt: vm
 
 jobs:
   include:
