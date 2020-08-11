@@ -27,7 +27,7 @@ jobs:
       - node hello.js
 
   - language: java
-    jdk: openjdk8
+    jdk: openjdk9
     script:
       - mvn clean install
 
