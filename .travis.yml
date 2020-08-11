@@ -36,7 +36,6 @@ jobs:
       - go run ./hello.go
  
   - language: php
-    php: '7.0'
     script:
       - php hello.php
 
@@ -60,10 +59,3 @@ jobs:
       - csc hello.cs
       - mono hello.exe
 
-  - language: smalltalk
-    os:
-      - linux
-    smalltalk_vm:
-      - Squeak-5.0
-    smalltalk:
-      - Squeak64-trunk
