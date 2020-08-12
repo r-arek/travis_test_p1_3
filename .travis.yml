@@ -1,5 +1,6 @@
 os: linux
 dist: focal
+group: dev
 
 jobs:
   include:
