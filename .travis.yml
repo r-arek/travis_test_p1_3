@@ -17,6 +17,6 @@ jobs:
     script:
       - node hello.js
 
-  - language: ruby
+  - language: python
     script:
       - return 0
