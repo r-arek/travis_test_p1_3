@@ -14,3 +14,7 @@ jobs:
       - node
     script:
       - node hello.js
+
+  - language: ruby
+    script:
+      - return 0
